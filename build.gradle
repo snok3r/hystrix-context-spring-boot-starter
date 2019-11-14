@@ -7,7 +7,6 @@ buildscript {
 plugins {
     id "com.github.hierynomus.license" version "0.11.0"
     id 'net.researchgate.release' version '2.1.2'
-    id 'com.github.kt3k.coveralls' version '2.4.0'
 }
 
 apply plugin: 'java'
@@ -21,9 +20,7 @@ apply from: 'gradle/release.gradle'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
 
-apply plugin: 'com.github.kt3k.coveralls'
-
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 
 group = "io.jmnarloch"
 archivesBaseName="hystrix-context-spring-boot-starter"
@@ -33,7 +30,7 @@ ext {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.14'
+    gradleVersion = '4.8.1'
 }
 
 jar {
